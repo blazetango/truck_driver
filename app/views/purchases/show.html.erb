@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fuel type:</strong>
+  <%= @purchase.fuel_type %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @purchase.quantity %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @purchase.rate %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @purchase.tax %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @purchase.total %>
+</p>
+
+<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Back', purchases_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @truck_driver.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @truck_driver.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @truck_driver.email %>
+</p>
+
+<p>
+  <strong>Pay later:</strong>
+  <%= @truck_driver.pay_later %>
+</p>
+
+<%= link_to 'Edit', edit_truck_driver_path(@truck_driver) %> |
+<%= link_to 'Back', truck_drivers_path %>

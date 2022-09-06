@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Payment:</strong>
+  <%= @settlement.payment_id %>
+</p>
+
+<p>
+  <strong>Settle amount:</strong>
+  <%= @settlement.settle_amount %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @settlement.status %>
+</p>
+
+<%= link_to 'Edit', edit_settlement_path(@settlement) %> |
+<%= link_to 'Back', settlements_path %>

@@ -1,0 +1,33 @@
+<%= form_with(model: escalation, local: true) do |form| %>
+  <% if escalation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(escalation.errors.count, "error") %> prohibited this escalation from being saved:</h2>
+
+      <ul>
+        <% escalation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :payment_id %>
+    <%= form.select :payment_id, @payment.map { |g| [g.id, g.id] }, {},{ class: 'form-control' }  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :truck_driver_id %>
+    <%= form.select :truck_driver_id, TruckDriver.all.map { |g| [g.id, g.id] }, {},{ class: 'form-control' }  %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :expected_amount %>
+    <%= form.text_field :expected_amount %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

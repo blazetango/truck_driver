@@ -1,0 +1,32 @@
+<%= form_with(model: settlement, local: true) do |form| %>
+  <% if settlement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(settlement.errors.count, "error") %> prohibited this settlement from being saved:</h2>
+
+      <ul>
+        <% settlement.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :payment_id %>
+    <%= form.number_field :payment_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :settle_amount %>
+    <%= form.text_field :settle_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.number_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

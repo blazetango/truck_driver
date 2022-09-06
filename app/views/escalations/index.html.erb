@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Escalations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Payment</th>
+      <th>Expected amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @escalations.each do |escalation| %>
+      <tr>
+        <td><%= escalation.payment_id %></td>
+        <td><%= escalation.expected_amount %></td>
+        <td><%= link_to 'Show', escalation %></td>
+        <td><%= link_to 'Edit', edit_escalation_path(escalation) %></td>
+        <td><%= link_to 'Destroy', escalation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Escalation', new_escalation_path %>

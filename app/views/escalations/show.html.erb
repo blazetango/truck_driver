@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Payment:</strong>
+  <%= @escalation.payment_id %>
+</p>
+
+<p>
+  <strong>Expected amount:</strong>
+  <%= @escalation.expected_amount %>
+</p>
+
+<%= link_to 'Edit', edit_escalation_path(@escalation) %> |
+<%= link_to 'Back', escalations_path %>
